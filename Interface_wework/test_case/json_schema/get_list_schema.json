@@ -1,0 +1,226 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "errcode": 0,
+            "errmsg": "ok",
+            "department": [
+                {
+                    "id": 1,
+                    "name": "WestWayyt",
+                    "parentid": 0,
+                    "order": 100000000
+                },
+                {
+                    "id": 3,
+                    "name": "葛莱芬多",
+                    "parentid": 1,
+                    "order": 1,
+                    "name_en": "RDGZ"
+                }
+            ]
+        }
+    ],
+    "required": [
+        "errcode",
+        "errmsg",
+        "department"
+    ],
+    "properties": {
+        "errcode": {
+            "default": 0,
+            "description": "An explanation about the purpose of this instance.",
+            "examples": [
+                0
+            ],
+            "title": "The errcode schema",
+            "type": ["string", "integer"]
+        },
+        "errmsg": {
+            "$id": "#/properties/errmsg",
+            "type": "string",
+            "title": "The errmsg schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "ok"
+            ]
+        },
+        "department": {
+            "$id": "#/properties/department",
+            "type": "array",
+            "title": "The department schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "id": 1,
+                        "name": "WestWayyt",
+                        "parentid": 0,
+                        "order": 100000000
+                    },
+                    {
+                        "id": 3,
+                        "name": "葛莱芬多",
+                        "parentid": 1,
+                        "order": 1,
+                        "name_en": "RDGZ"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/department/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/department/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "id": 1,
+                                "name": "WestWayyt",
+                                "parentid": 0,
+                                "order": 100000000
+                            }
+                        ],
+                        "required": [
+                            "id",
+                            "name",
+                            "parentid",
+                            "order"
+                        ],
+                        "properties": {
+                            "id": {
+                                "$id": "#/properties/department/items/anyOf/0/properties/id",
+                                "type": "integer",
+                                "title": "The id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "name": {
+                                "$id": "#/properties/department/items/anyOf/0/properties/name",
+                                "type": "string",
+                                "title": "The name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "WestWayyt"
+                                ]
+                            },
+                            "parentid": {
+                                "$id": "#/properties/department/items/anyOf/0/properties/parentid",
+                                "type": "integer",
+                                "title": "The parentid schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    0
+                                ]
+                            },
+                            "order": {
+                                "$id": "#/properties/department/items/anyOf/0/properties/order",
+                                "type": "integer",
+                                "title": "The order schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    100000000
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    },
+                    {
+                        "$id": "#/properties/department/items/anyOf/1",
+                        "type": "object",
+                        "title": "The second anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "id": 3,
+                                "name": "葛莱芬多",
+                                "parentid": 1,
+                                "order": 1,
+                                "name_en": "RDGZ"
+                            }
+                        ],
+                        "required": [
+                            "id",
+                            "name",
+                            "parentid",
+                            "order",
+                            "name_en"
+                        ],
+                        "properties": {
+                            "id": {
+                                "$id": "#/properties/department/items/anyOf/1/properties/id",
+                                "type": "integer",
+                                "title": "The id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    3
+                                ]
+                            },
+                            "name": {
+                                "$id": "#/properties/department/items/anyOf/1/properties/name",
+                                "type": "string",
+                                "title": "The name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "葛莱芬多"
+                                ]
+                            },
+                            "parentid": {
+                                "$id": "#/properties/department/items/anyOf/1/properties/parentid",
+                                "type": "integer",
+                                "title": "The parentid schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "order": {
+                                "$id": "#/properties/department/items/anyOf/1/properties/order",
+                                "type": "integer",
+                                "title": "The order schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "name_en": {
+                                "$id": "#/properties/department/items/anyOf/1/properties/name_en",
+                                "type": "string",
+                                "title": "The name_en schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "RDGZ"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}
